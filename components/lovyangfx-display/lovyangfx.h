@@ -94,10 +94,10 @@ class LovyanGFX : public lgfx::LGFX_Device,
         _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
         }
 
-    LovyanGFX lcd;  
+ 
 
     }
-
+    LovyanGFX lcd; 
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
