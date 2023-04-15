@@ -21,9 +21,9 @@ class LovyanGFX : public PollingComponent,
                    public display::DisplayBuffer
 {
     //lgfx::Panel_ILI9341 _panel_instance;
-    static constexpr lgfx::Panel_ST7789 _panel_instance;
-    static constexpr lgfx::Bus_Parallel8 _bus_instance; 
-    static constexpr lgfx::Light_PWM     _light_instance;    
+    lgfx::Panel_ST7789 _panel_instance; 
+    lgfx::Bus_Parallel8 _bus_instance; 
+    lgfx::Light_PWM     _light_instance;    
 
     void LGFX(void)
     {
