@@ -22,7 +22,7 @@ class LovyanGFX : public PollingComponent,
 {
     //lgfx::Panel_ILI9341 _panel_instance;
     static lgfx::Panel_ST7789 _panel_instance;
-    static lgfx::Bus_Parallel8 _bus_instance; 
+    static const lgfx::Bus_Parallel8 _bus_instance; 
     static lgfx::Light_PWM     _light_instance;    
   public:
 
