@@ -27,7 +27,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     lgfx::Light_PWM     _light_instance;    
     
     public:
-    LovyanGFX1(void)
+    LovyanGFX(void)
     {
         {                                      // バス制御の設定を行います。
             auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
@@ -105,7 +105,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
 
     void setup() override {
         lcd.init();
-        lcd.setRotation(3);
+        //lcd.setRotation(3);
         lcd.setBrightness(1);
         lcd.fillScreen(TFT_RED);
         delay(500);
