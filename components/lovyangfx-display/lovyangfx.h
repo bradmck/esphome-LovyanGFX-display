@@ -27,7 +27,7 @@ class LovyanGFX : public PollingComponent,
 
 
                                     // バス制御の設定を行います。
-            auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
+            static constexpr auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
 
             // 16位设置
            // cfg.i2s_port = I2S_NUM_0;  // 使用するI2Sポートを選択 (0 or 1) (ESP32のI2S LCDモードを使用します)
