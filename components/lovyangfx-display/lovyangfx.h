@@ -25,7 +25,7 @@ class LovyanGFX : public PollingComponent,
     static constexpr lgfx::Bus_Parallel8 _bus_instance; 
     static constexpr lgfx::Light_PWM     _light_instance;    
 
-    LGFX(void)
+    void LGFX(void)
     {
         {                                      // バス制御の設定を行います。
             auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
