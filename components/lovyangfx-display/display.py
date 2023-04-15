@@ -19,7 +19,7 @@ def validate_lovyangfx(config):
 CONFIG_SCHEMA = cv.All(
     display.FULL_DISPLAY_SCHEMA.extend(
         {
-            cv.GenerateID(): cv.declare_id(TDISPLAYS3),
+            cv.GenerateID(): cv.declare_id(LOVYANGFX),
             cv.Optional(CONF_HEIGHT): cv.int_,
             cv.Optional(CONF_WIDTH): cv.int_,
         }
