@@ -1,5 +1,5 @@
-#ifndef TDISPLAY_S3
-#define TDISPLAY_S3
+#ifndef LOVYANGFX
+#define LOVYANGFX
 
 #include "TFT_eSPI.h"
 #include "esphome.h"
@@ -10,11 +10,11 @@
 #include "esphome/components/display/display_color_utils.h"
 
 namespace esphome {
-namespace tdisplays3 {
+namespace lovyangfx {
 
-static const char *const TAG = "TDisplayS3";
+static const char *const TAG = "LovyanGFX";
 
-class TDisplayS3 : public PollingComponent,
+class LovyanGFX : public PollingComponent,
                    public display::DisplayBuffer
 {
   public:
