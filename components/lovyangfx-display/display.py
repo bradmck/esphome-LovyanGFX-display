@@ -33,6 +33,7 @@ async def to_code(config):
     #cg.add_build_flag("-DUSER_SETUP_LOADED=1")
 
 
+    cg.add_library("Wire", None)
     cg.add_library("SPI", None)
     cg.add_library("FS", None)
     cg.add_library("SPIFFS", None)
