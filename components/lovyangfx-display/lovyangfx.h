@@ -22,12 +22,12 @@ class LovyanGFX : public PollingComponent,
 {
     //lgfx::Panel_ILI9341 _panel_instance;
     static lgfx::Panel_ST7789 _panel_instance;
-    static const lgfx::Bus_Parallel8 _bus_instance; 
+    static lgfx::Bus_Parallel8 _bus_instance; 
     static lgfx::Light_PWM     _light_instance;    
   public:
 
                                     // バス制御の設定を行います。
-            static auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
+            const auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
 
             // 16位设置
            // cfg.i2s_port = I2S_NUM_0;  // 使用するI2Sポートを選択 (0 or 1) (ESP32のI2S LCDモードを使用します)
