@@ -9,7 +9,7 @@ from esphome.const import (
 )
 from . import lovyangfx_ns
 
-TDISPLAYS3 = lovyangfx_ns.class_(
+LOVYANGFX = lovyangfx_ns.class_(
     "LovyanGFX", cg.PollingComponent, display.DisplayBuffer
 )
 
