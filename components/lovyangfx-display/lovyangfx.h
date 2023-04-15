@@ -94,7 +94,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
         _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
         }
 
-
+    LovyanGFX lcd;  
 
     }
 
@@ -141,7 +141,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     }
 
     private:
-    LovyanGFX lcd;  
+
 };
 
 }  // namespace tdisplays3
