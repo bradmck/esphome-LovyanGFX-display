@@ -24,7 +24,7 @@ class LovyanGFX : public PollingComponent,
     static lgfx::Panel_ST7789 _panel_instance;
     static lgfx::Bus_Parallel8 _bus_instance; 
     static lgfx::Light_PWM     _light_instance;    
-  public:
+
 
                                     // バス制御の設定を行います。
             static auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
@@ -88,9 +88,9 @@ class LovyanGFX : public PollingComponent,
 
       _light_instance.config(cfg);
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
+    public:
 
-
-static LGFX lcd;  
+    static LGFX lcd;  
 
     void setup() override {
         lcd.init();
