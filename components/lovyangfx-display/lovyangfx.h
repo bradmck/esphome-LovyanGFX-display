@@ -98,11 +98,6 @@ class LovyanGFX : public lgfx::LGFX_Device,
 
     }
 
-
-
-
-    static LovyanGFX lcd;  
-
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
@@ -145,9 +140,8 @@ class LovyanGFX : public lgfx::LGFX_Device,
         //spr.pushSprite(0, 0);
     }
 
-//   private:
-//     TFT_eSPI tft = TFT_eSPI();
-//     TFT_eSprite spr = TFT_eSprite(&tft);
+    private:
+    static LovyanGFX lcd;  
 };
 
 }  // namespace tdisplays3
