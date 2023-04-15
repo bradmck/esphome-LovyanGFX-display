@@ -25,9 +25,10 @@ class LovyanGFX : public PollingComponent,
     static constexpr lgfx::Bus_Parallel8 _bus_instance; 
     static constexpr lgfx::Light_PWM     _light_instance;    
 
-
-                                    // バス制御の設定を行います。
-            static auto constexpr cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
+    LGFX(void)
+    {
+        {                                      // バス制御の設定を行います。
+            auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
 
             // 16位设置
            // cfg.i2s_port = I2S_NUM_0;  // 使用するI2Sポートを選択 (0 or 1) (ESP32のI2S LCDモードを使用します)
@@ -48,9 +49,10 @@ class LovyanGFX : public PollingComponent,
 
             _bus_instance.config(cfg);              // 設定値をバスに反映します。
             _panel_instance.setBus(&_bus_instance); // バスをパネルにセットします。
+        }
 
-                                     // 表示パネル制御の設定を行います。
-            static auto cfg = _panel_instance.config(); // 表示パネル設定用の構造体を取得します。
+        {                                        // 表示パネル制御の設定を行います。
+            auto cfg = _panel_instance.config(); // 表示パネル設定用の構造体を取得します。
 
             cfg.pin_cs = 6;   // CS要拉低
             cfg.pin_rst = 5;  // RST和开发板RST相连
@@ -74,12 +76,12 @@ class LovyanGFX : public PollingComponent,
             cfg.bus_shared = false;    // SDカードとバスを共有している場合 trueに設定(drawJpgFile等でバス制御を行います)
 
             _panel_instance.config(cfg);
-        
+        }
 
         setPanel(&_panel_instance); // 使用するパネルをセットします。
     
-
-      static auto cfg = _light_instance.config();    // バックライト設定用の構造体を取得します。
+    { // バックライト制御の設定を行います。（必要なければ削除）
+      auto cfg = _light_instance.config();    // バックライト設定用の構造体を取得します。
 
       cfg.pin_bl = 38;              // バックライトが接続されているピン番号
       cfg.invert = false;           // バックライトの輝度を反転させる場合 true
@@ -88,6 +90,10 @@ class LovyanGFX : public PollingComponent,
 
       _light_instance.config(cfg);
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
+    }
+    }
+
+
     public:
 
     static LGFX lcd;  
