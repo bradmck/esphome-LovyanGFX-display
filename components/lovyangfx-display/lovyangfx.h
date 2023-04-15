@@ -25,7 +25,8 @@ class LovyanGFX : public lgfx::LGFX_Device,
     lgfx::Panel_ST7789 _panel_instance; 
     lgfx::Bus_Parallel8 _bus_instance; 
     lgfx::Light_PWM     _light_instance;    
-
+    
+    public:
     LovyanGFX()
     {
         {                                      // バス制御の設定を行います。
@@ -95,7 +96,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     }
 
 
-    public:
+
 
     static LovyanGFX lcd;  
 
