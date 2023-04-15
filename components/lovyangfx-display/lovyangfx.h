@@ -118,13 +118,13 @@ class LovyanGFX : public lgfx::LGFX_Device,
         lcd.fillScreen(display::ColorUtil::color_to_565(color));
     }
 
-    // int get_width_internal() override {
-    //     return lcd.width();
-    // }
+    int get_width_internal() override {
+        return lcd.width();
+    }
 
-    // int get_height_internal() override {
-	// return lcd.height();
-    // }
+    int get_height_internal() override {
+	return lcd.height();
+    }
 
     display::DisplayType get_display_type() override {
         return display::DisplayType::DISPLAY_TYPE_COLOR;
