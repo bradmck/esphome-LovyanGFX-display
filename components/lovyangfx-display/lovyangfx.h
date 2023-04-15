@@ -27,7 +27,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     lgfx::Light_PWM     _light_instance;    
     
     public:
-    LovyanGFX lcd;     
+    static LovyanGFX lcd;     
     // LovyanGFX(void)
     // {
     //     {                                      // バス制御の設定を行います。
