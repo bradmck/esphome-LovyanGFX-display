@@ -27,7 +27,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     lgfx::Light_PWM     _light_instance;    
     
     public:
-    LovyanGFX(void)
+    LovyanGFX1(void)
     {
         {                                      // バス制御の設定を行います。
             auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
@@ -93,6 +93,9 @@ class LovyanGFX : public lgfx::LGFX_Device,
       _light_instance.config(cfg);
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
     }
+
+
+
     }
 
 
