@@ -27,7 +27,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     lgfx::Light_PWM     _light_instance;    
     
     public:
-    static LovyanGFX lcd;     
+ 
     LovyanGFX(void)
     {
         {                                      // バス制御の設定を行います。
@@ -99,6 +99,11 @@ class LovyanGFX : public lgfx::LGFX_Device,
 
     }
 
+
+    private:
+
+};
+    static LovyanGFX lcd;    
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
@@ -118,11 +123,11 @@ class LovyanGFX : public lgfx::LGFX_Device,
     }
 
     int get_width_internal() override {
-        //return lcd.width();
+        return lcd.width();
     }
 
     int get_height_internal() override {
-	    //return lcd.height();
+	    return lcd.height();
     }
 
     display::DisplayType get_display_type() override {
@@ -140,10 +145,6 @@ class LovyanGFX : public lgfx::LGFX_Device,
         this->do_update_();
         //spr.pushSprite(0, 0);
     }
-
-    private:
-
-};
 
 }  // namespace tdisplays3
 }  // namespace esphome
