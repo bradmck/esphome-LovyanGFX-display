@@ -118,11 +118,11 @@ class LGFX : public lgfx::LGFX_Device,
     }
 
     int get_width_internal() override {
-        return lcd.Width();
+        return lcd.width();
     }
 
     int get_height_internal() override {
-	return lcd.Height();
+	return lcd.height();
     }
 
     display::DisplayType get_display_type() override {
