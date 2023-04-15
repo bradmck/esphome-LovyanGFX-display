@@ -26,7 +26,7 @@ class LGFX : public lgfx::LGFX_Device,
     lgfx::Bus_Parallel8 _bus_instance; 
     lgfx::Light_PWM     _light_instance;    
 
-    void LGFX(void)
+    void LGFX()
     {
         {                                      // バス制御の設定を行います。
             auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
@@ -118,11 +118,11 @@ class LGFX : public lgfx::LGFX_Device,
     }
 
     int get_width_internal() override {
-        return lcd.getViewportWidth();
+        return lcd.Width();
     }
 
     int get_height_internal() override {
-	return lcd.getViewportHeight();
+	return lcd.Height();
     }
 
     display::DisplayType get_display_type() override {
