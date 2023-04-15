@@ -97,7 +97,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
  
 
     }
-    LovyanGFX lcd; 
+
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
@@ -143,7 +143,7 @@ class LovyanGFX : public lgfx::LGFX_Device,
     private:
 
 };
-
+    LovyanGFX lcd; 
 }  // namespace tdisplays3
 }  // namespace esphome
 
