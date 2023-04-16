@@ -16,8 +16,7 @@ namespace esphome {
 namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
-
-LGFX lcd;   
+ 
 
 class LovyanGFX : public lgfx::LGFX_Device,
                     public PollingComponent,
