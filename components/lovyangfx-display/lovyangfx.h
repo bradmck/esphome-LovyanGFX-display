@@ -17,7 +17,7 @@ namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
 
-static LGFX lcd;   
+LGFX lcd;   
 
 class LovyanGFX : public lgfx::LGFX_Device,
                     public PollingComponent,
