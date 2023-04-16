@@ -103,7 +103,8 @@ class LovyanGFX : public lgfx::LGFX_Device,
     private:
 
 };
-    static LovyanGFX lcd;    
+    //static LovyanGFX lcd;    
+    static LGFX lcd;    
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
