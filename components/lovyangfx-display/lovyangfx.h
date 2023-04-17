@@ -29,8 +29,8 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     
     public:
 
-    LGFX_Sprite canvas;
-    lgfx::LGFX_Device lcd;
+    // LGFX_Sprite canvas;
+    // lgfx::LGFX_Device lcd;
       
     LovyanGFX(void)
     {
@@ -99,6 +99,10 @@ class LovyanGFX :   public lgfx::LGFX_Device,
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
     }
     }
+};
+
+    LGFX_Sprite canvas;
+    LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
@@ -151,7 +155,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
 
 
     }
-};
+
 
 
 }  // namespace tdisplays3
