@@ -102,7 +102,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
 };
 
     LGFX_Sprite canvas;
-    LovyanGFX lcd;
+    LovyanGFX::LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
