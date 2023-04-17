@@ -142,7 +142,15 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         //spr.pushSprite(0, 0);
     }
 
+    void dump_config() {
+        ESP_LOGCONFIG(TAG, "LovyanGFX:");
+           
+        //ESP_LOGCONFIG(TAG, "  TFT_eSPI Library Version: %s", tftSetup.version.c_str());
+        ESP_LOGCONFIG(TAG, "  TFT Width: %d", lcd.width());
+        ESP_LOGCONFIG(TAG, "  TFT Height: %d", lcd.height());
 
+
+    }
 };
 
 
