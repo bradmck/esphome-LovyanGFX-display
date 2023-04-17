@@ -28,8 +28,6 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     lgfx::Light_PWM     _light_instance;    
     
     public:
-
-};
     //static LovyanGFX lcd;    
   
     void setup() override {
@@ -75,6 +73,8 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     }
 
     static LGFX lcd;  
+};
+
 
 }  // namespace tdisplays3
 }  // namespace esphome
