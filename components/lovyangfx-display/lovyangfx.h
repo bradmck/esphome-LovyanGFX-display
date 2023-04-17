@@ -74,7 +74,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         //spr.pushSprite(0, 0);
     }
 
-    static LovyanGFX lcd;  
+    static LGFX lcd;  
 
 }  // namespace tdisplays3
 }  // namespace esphome
