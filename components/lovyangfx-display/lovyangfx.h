@@ -103,7 +103,7 @@ class LGFXDisplay : public PollingComponent,
                     public display::DisplayBuffer
 {
     LGFX_Sprite spr;
-    LovyanGFX::LovyanGFX lcd;
+    LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
