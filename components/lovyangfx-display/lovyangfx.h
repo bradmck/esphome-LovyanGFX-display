@@ -29,7 +29,9 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     
     public:
     //static LovyanGFX lcd;    
-  
+    LGFX_Sprite canvas;
+    LGFX lcd;
+      
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
@@ -72,8 +74,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         //spr.pushSprite(0, 0);
     }
 
-    LGFX lcd;
-    LGFX_Sprite canvas;
+
 };
 
 
