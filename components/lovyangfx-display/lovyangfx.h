@@ -18,7 +18,7 @@ namespace lovyangfx {
 static const char *const TAG = "LovyanGFX";
  
 
-class LGFX :   public lgfx::LGFX_Device,
+class LovyanGFX :   public lgfx::LGFX_Device,
                     public PollingComponent,
                     public display::DisplayBuffer
 {
@@ -32,7 +32,7 @@ class LGFX :   public lgfx::LGFX_Device,
     // LGFX_Sprite canvas;
     // lgfx::LGFX_Device lcd;
       
-    LGFX(void)
+    LovyanGFX(void)
     {
         {                                      // バス制御の設定を行います。
             auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
@@ -105,7 +105,7 @@ class LGFXDisplay : public PollingComponent,
                     public display::DisplayBuffer
 {
     LGFX_Sprite spr;
-    LGFX lcd;
+    LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
