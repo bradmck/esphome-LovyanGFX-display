@@ -101,14 +101,14 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     }
 };
 
-    LGFX_Sprite canvas;
+    LGFX_Sprite spr;
     LovyanGFX::LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
         lcd.setBrightness(1);
-        lcd.fillScreen(TFT_RED);
+        lcd.fillScreen(TFT_BLACK);
         delay(500);
     }
 
@@ -135,7 +135,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     }
 
     void draw_absolute_pixel_internal(int x, int y, Color color) override {
-        lcd.drawPixel(x, y, display::ColorUtil::color_to_565(color));
+        spr.drawPixel(x, y, display::ColorUtil::color_to_565(color));
     }
 
     /////////////
@@ -143,7 +143,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     /////////////
     void update() override {
         this->do_update_();
-        //spr.pushSprite(0, 0);
+        spr.pushSprite(0, 0);
     }
 
     void dump_config() {
@@ -155,8 +155,6 @@ class LovyanGFX :   public lgfx::LGFX_Device,
 
 
     }
-
-
 
 }  // namespace tdisplays3
 }  // namespace esphome
