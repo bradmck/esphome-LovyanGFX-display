@@ -28,9 +28,9 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     lgfx::Light_PWM     _light_instance;    
     
     public:
-    //static LovyanGFX lcd;    
+    static LovyanGFX::LovyanGFX lcd;    
     LGFX_Sprite canvas;
-    lgfx::LGFX_Device lcd;
+    //lgfx::LGFX_Device lcd;
       
     LovyanGFX(void)
     {
