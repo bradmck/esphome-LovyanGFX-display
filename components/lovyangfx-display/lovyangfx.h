@@ -158,7 +158,8 @@ class LGFXDisplay : public PollingComponent,
 
 
     }
-}
+};
+
 }  // namespace tdisplays3
 }  // namespace esphome
 
