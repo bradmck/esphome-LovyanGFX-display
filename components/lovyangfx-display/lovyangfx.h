@@ -72,7 +72,8 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         //spr.pushSprite(0, 0);
     }
 
-    static LGFX lcd;  
+    LGFX lcd;
+    LGFX_Sprite canvas;
 };
 
 
