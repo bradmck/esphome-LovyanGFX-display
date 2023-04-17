@@ -101,6 +101,9 @@ class LGFX :   public lgfx::LGFX_Device,
     }
 };
 
+class LGFXDisplay : public PollingComponent,
+                    public display::DisplayBuffer
+{
     LGFX_Sprite spr;
     LGFX lcd;
 
@@ -155,7 +158,7 @@ class LGFX :   public lgfx::LGFX_Device,
 
 
     }
-
+}
 }  // namespace tdisplays3
 }  // namespace esphome
 
