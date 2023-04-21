@@ -16,7 +16,8 @@ namespace esphome {
 namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
- 
+
+LovyanGFX lcd;
 
 class LovyanGFX :   public lgfx::LGFX_Device,
                     public PollingComponent,
@@ -98,8 +99,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
       _light_instance.config(cfg);
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
     }
-    }
-    LovyanGFX lcd;    
+    } 
 };
 
 class LGFXDisplay : public PollingComponent,
@@ -161,7 +161,7 @@ class LGFXDisplay : public PollingComponent,
     }
 };
 
-}  // namespace tdisplays3
+}  // namespace lovyangfx
 }  // namespace esphome
 
 #endif
