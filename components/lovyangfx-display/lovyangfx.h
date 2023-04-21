@@ -99,13 +99,14 @@ class LovyanGFX :   public lgfx::LGFX_Device,
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
     }
     }
+    LovyanGFX lcd;    
 };
 
 class LGFXDisplay : public PollingComponent,
                     public display::DisplayBuffer
 {
     LGFX_Sprite spr;
-    LovyanGFX::LovyanGFX lcd;
+    LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
