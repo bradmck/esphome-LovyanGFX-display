@@ -17,12 +17,11 @@ namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
 
-LGFX lcd;
+LovyanGFX lcd;
 LGFX_Sprite spr;
 
-class LovyanGFX :   public lgfx::LGFX_Device,
-                    public PollingComponent,
-                    public display::DisplayBuffer
+class LovyanGFX :   public lgfx::LGFX_Device
+
 {
     //lgfx::Panel_ILI9341 _panel_instance;
     lgfx::Panel_ST7789 _panel_instance; 
@@ -100,7 +99,14 @@ class LovyanGFX :   public lgfx::LGFX_Device,
       _light_instance.config(cfg);
       _panel_instance.setLight(&_light_instance);  // バックライトをパネルにセットします。
     }
-    }
+    } 
+};
+
+class LGFXDisplay : public PollingComponent,
+                    public display::DisplayBuffer
+{
+
+    //LovyanGFX lcd;
 
     void setup() override {
         lcd.init();
@@ -152,7 +158,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         ESP_LOGCONFIG(TAG, "  TFT Height: %d", lcd.height());
 
 
-    }     
+    }
 };
 
 }  // namespace lovyangfx
