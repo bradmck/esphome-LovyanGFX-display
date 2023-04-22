@@ -19,7 +19,7 @@ static const char *const TAG = "LovyanGFX";
 
 
 
-class LovyanGFX :   public lgfx::LGFX_Device,
+class LGFX :   public lgfx::LGFX_Device,
                     public PollingComponent,
                     public display::DisplayBuffer
 
@@ -28,11 +28,10 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     lgfx::Panel_ST7789 _panel_instance; 
     lgfx::Bus_Parallel8 _bus_instance; 
     lgfx::Light_PWM     _light_instance;    
-    static LovyanGFX lcd;
-    LGFX_Sprite spr;     
+  
     public:
 
-    LovyanGFX(void)
+    LGFX(void)
     {
         {
             auto cfg = _bus_instance.config();
@@ -94,6 +93,14 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         }        
     }
 
+};
+
+class LovyanGFX :        public PollingComponent,
+                    public display::DisplayBuffer
+{
+    static LGFX lcd;
+    LGFX_Sprite spr;   
+
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
@@ -147,9 +154,8 @@ class LovyanGFX :   public lgfx::LGFX_Device,
 
 
     }
-       
-};
 
+};
 
 }  // namespace lovyangfx
 }  // namespace esphome
