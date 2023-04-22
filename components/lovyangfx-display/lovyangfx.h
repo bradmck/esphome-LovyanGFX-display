@@ -20,7 +20,9 @@ static const char *const TAG = "LovyanGFX";
 LovyanGFX lcd;
 LGFX_Sprite spr;
 
-class LovyanGFX :   public lgfx::LGFX_Device
+class LovyanGFX :   public lgfx::LGFX_Device,
+                    public PollingComponent,
+                    public display::DisplayBuffer
 
 {
     //lgfx::Panel_ILI9341 _panel_instance;
