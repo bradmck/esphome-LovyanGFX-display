@@ -93,10 +93,6 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         }        
     }
 
-
-    static LovyanGFX lcd;
-    LGFX_Sprite spr;
-
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
@@ -147,7 +143,9 @@ class LovyanGFX :   public lgfx::LGFX_Device,
         ESP_LOGCONFIG(TAG, "  TFT Height: %d", lcd.height());
 
 
-    }    
+    }
+    static LovyanGFX lcd;
+    LGFX_Sprite spr;        
 };
 
 
