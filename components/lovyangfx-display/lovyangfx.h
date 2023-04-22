@@ -17,7 +17,7 @@ namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
 
-LGFX lcd;
+LGFX::LGFX lcd;
 LGFX_Sprite spr; 
 
 class LGFX :   public lgfx::LGFX_Device,
