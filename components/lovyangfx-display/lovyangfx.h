@@ -112,11 +112,13 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     }
 
     int get_width_internal() override {
-        return lcd.width();
+        //return lcd.width();
+        return 170;
     }
 
     int get_height_internal() override {
-	    return lcd.height();
+	    //return lcd.height();
+        return 320;
     }
 
     display::DisplayType get_display_type() override {
