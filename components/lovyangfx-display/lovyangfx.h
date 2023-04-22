@@ -95,7 +95,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
 
 
     static LovyanGFX lcd;
-
+    LGFX_Sprite spr;
 
     void setup() override {
         lcd.init();
