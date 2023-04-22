@@ -103,7 +103,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     void setup() override {
         lcd.init();
         //lcd.setRotation(3);
-        lcd.setBrightness(1);
+        lcd.setBrightness(100);
         lcd.fillScreen(TFT_RED);
         delay(500);
     }
