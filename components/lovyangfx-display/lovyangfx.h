@@ -31,7 +31,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     
     public:
 
-    LGFX(void)
+    LovyanGFX(void)
     {
         {
         auto cfg = _bus_instance.config();
@@ -71,7 +71,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     }
 
 
-    static LGFX lcd;
+    static LovyanGFX lcd;
 
 
     void setup() override {
