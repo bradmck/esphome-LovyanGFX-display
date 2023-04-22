@@ -34,6 +34,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     LovyanGFX(void)
     {
         {
+            auto cfg = _bus_instance.config();
             cfg.freq_write = 20000000; // 送信クロック (最大20MHz, 80MHzを整数で割った値に丸められます)
             cfg.pin_wr = 8;           // WR を接続しているピン番号
             cfg.pin_rd = 9;           // RD を接続しているピン番号
