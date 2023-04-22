@@ -17,10 +17,10 @@ namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
 
-LGFX::LGFX lcd;
+LovyanGFX lcd;
 LGFX_Sprite spr; 
 
-class LGFX :   public lgfx::LGFX_Device,
+class LovyanGFX :   public lgfx::LGFX_Device,
                     public PollingComponent,
                     public display::DisplayBuffer
 
@@ -32,7 +32,7 @@ class LGFX :   public lgfx::LGFX_Device,
   
     public:
 
-    LGFX(void)
+    LovyanGFX(void)
     {
         {
             auto cfg = _bus_instance.config();
@@ -96,7 +96,7 @@ class LGFX :   public lgfx::LGFX_Device,
 
 };
 
-class LovyanGFX :        public PollingComponent,
+class LGFXDisplay :        public PollingComponent,
                     public display::DisplayBuffer
 {
   
