@@ -17,7 +17,8 @@ namespace lovyangfx {
 
 static const char *const TAG = "LovyanGFX";
 
-
+static LGFX lcd;
+LGFX_Sprite spr; 
 
 class LGFX :   public lgfx::LGFX_Device,
                     public PollingComponent,
@@ -98,8 +99,7 @@ class LGFX :   public lgfx::LGFX_Device,
 class LovyanGFX :        public PollingComponent,
                     public display::DisplayBuffer
 {
-    static LGFX lcd;
-    LGFX_Sprite spr;   
+  
 
     void setup() override {
         lcd.init();
