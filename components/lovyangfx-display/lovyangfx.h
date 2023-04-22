@@ -35,7 +35,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     // LGFX_Sprite canvas;
     // lgfx::LGFX_Device lcd;
       
-    LovyanGFX(void)
+    lgfx::LGFX_Device LovyanGFX(void)
     {
         {                                      // バス制御の設定を行います。
             auto cfg = _bus_instance.config(); // バス設定用の構造体を取得します。
