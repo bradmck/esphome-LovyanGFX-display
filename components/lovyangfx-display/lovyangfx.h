@@ -94,10 +94,10 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     }
 
     void setup() override {
-        lcd.init();
+        //lcd.init();
         //lcd.setRotation(3);
-        lcd.setBrightness(1);
-        lcd.fillScreen(TFT_BLACK);
+        //lcd.setBrightness(1);
+        //lcd.fillScreen(TFT_BLACK);
         delay(500);
     }
 
@@ -108,7 +108,7 @@ class LovyanGFX :   public lgfx::LGFX_Device,
     // DisplayBuffer methods
     //////////
     void fill(Color color) override {
-        lcd.fillScreen(display::ColorUtil::color_to_565(color));
+        //lcd.fillScreen(display::ColorUtil::color_to_565(color));
     }
 
     int get_width_internal() override {
